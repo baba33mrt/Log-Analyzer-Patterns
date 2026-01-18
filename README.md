@@ -1,4 +1,4 @@
-# NationsTools – Log Analyzer Patterns
+# NationsTools – Log Analyzer Patterns (NT-LAP)
 
 Ce dépôt fait partie de l’écosystème de l’association NationsTools.  
 Il centralise les **patterns de logs** utilisés par l’API NationsTools afin de transformer des logs serveur bruts en données structurés exploitables pour la création de fiche récapitulatif ou de statistiques.

@@ -7,6 +7,12 @@ player_command:
 player_alias:
   pattern: "{timestamp} [INFO] {player} issued alias: {command}"
 
+player_warp:
+  pattern: "{timestamp} [INFO] [NationsGUI] {player} vient de payer 20 pour se téléporter au warp {region}"
+  
+player_back:
+  pattern: "{timestamp} [INFO] [NationsUtils] Back du joueur {player} vers {world}, {x}, {y}, {z}"
+
 # ===========================
 # NationsStats
 # ===========================
@@ -55,6 +61,30 @@ war_cancel:
 country_refuse_colonisation:
   pattern: "{timestamp} Le pays {country} refuse d'être colonisé par {empire}, mise en ennemie automatique"
 
+chunk_access:
+  pattern: "{timestamp} [INFO] [Factions] Player {player} set access to player {player} in chunk {x}, {z} to true"
+  
+chunk_unaccess:
+  pattern: "{timestamp} [INFO] [Factions] Player {player} remove access to player {player} in chunk {x}, {z} to false"
+  
+faction_chat:
+  pattern: "{timestamp} [INFO] [FactionChat] FACTION|{player}: {text}"
+  
+faction_invite:
+  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} invited {player} to join country {country}"
+  
+faction_uninvite:
+  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} cancelled invitation {player} to join country {country}"
+  
+faction_promote:
+  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} demoted to {rank} {player} in country {country}"
+  
+faction_demote:
+  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} prommoted to {rank} {player} in country {country}"
+  
+faction_perms:
+  pattern: "{timestamp} [INFO] [FACTION] {player} changed faction permission {permission} to [{ALLY}, {LEADER}, {MEMBER}, {NEUTRAL}, {OFFICER}, {RECRUIT}]"
+
 # ===========================
 # Transactions bancaires
 # ===========================
@@ -87,6 +117,9 @@ combat_fired:
 
 combat_bullet:
   pattern: "{timestamp} MISE EN COMBAT DE {player} HIT BY BULLET"
+
+player_death:
+  pattern: "{timestamp} [INFO] [NationsUtils] Le joueur {player} est mort aux coordonnées : X{x}, Y{y}, Z{z}"
 
 # ===========================
 # Intrusions / Divers
@@ -174,3 +207,12 @@ spawn_obscure_block:
 
 spawn_millenial_wood:
   pattern: "{timestamp} [INFO] [NationsJob] SPAWN MILLENIAL WOOD IN {x}, {y}, {z} BY PLAYER {player}"
+
+# ===========================
+# Guerres
+# ===========================
+war_reason_add:
+  pattern: "{timestamp} [INFO] [NationsUtils] Add war event {reason} between {country} and {country}"
+  
+war_surrend:
+  pattern: "{timestamp} [INFO] [NationsGUI] {country} SURREND WAR AGAINST {country} APPLY REWARDS : {reward}#{amount}"

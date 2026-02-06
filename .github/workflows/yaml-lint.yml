@@ -1,0 +1,31 @@
+name: YAML format & snake_case check
+
+on:
+  push:
+    paths:
+      - "**/*.yml"
+      - "**/*.yaml"
+  pull_request:
+    paths:
+      - "**/*.yml"
+      - "**/*.yaml"
+
+jobs:
+  yaml-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install js-yaml glob
+
+      - name: Validate YAML files and keys
+        run: node .github/scripts/check-yaml.cjs
+

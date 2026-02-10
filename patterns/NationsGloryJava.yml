@@ -10,7 +10,7 @@ player_alias:
 
 player_warp:
   pattern: "{timestamp} [INFO] [NationsGUI] {player} vient de payer 20 pour se téléporter au warp {region}"
-  
+
 player_back:
   pattern: "{timestamp} [INFO] [NationsUtils] Back du joueur {player} vers {world}, {x}, {y}, {z}"
 
@@ -67,7 +67,7 @@ war_start:
   pattern: "{timestamp} [INFO] [NationsGUI] START WAR between {country_a} and {country_b} for reason {reason}"
 
 war_surrend:
-  pattern: "{timestamp} [INFO] [NationsGUI] {country} SURREND WAR AGAINST {country} APPLY REWARDS : {reward}#{amount}"
+  pattern: "{timestamp} [INFO] [NationsGUI] {country} SURREND WAR AGAINST {target_country} APPLY REWARDS : {reward}#{amount}"
 
 war_status_change:
   pattern: "{timestamp} [INFO] [NationsUtils] Change status of war request between {country_a} and {country_b} by {player} to {status}"
@@ -95,29 +95,29 @@ war_end_decrease_powerloss:
 # ===========================
 
 chunk_access:
-  pattern: "{timestamp} [INFO] [Factions] Player {player} set access to player {player} in chunk {x}, {z} to true"
-  
+  pattern: "{timestamp} [INFO] [Factions] Player {player} set access to player {target_player} in chunk {x}, {z} to true"
+
 chunk_unaccess:
-  pattern: "{timestamp} [INFO] [Factions] Player {player} remove access to player {player} in chunk {x}, {z} to false"
-  
+  pattern: "{timestamp} [INFO] [Factions] Player {player} remove access to player {target_player} in chunk {x}, {z} to false"
+
 faction_chat:
   pattern: "{timestamp} [INFO] [FactionChat] FACTION|{player}: {text}"
-  
+
 faction_invite:
-  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} invited {player} to join country {country}"
-  
+  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} invited {invited_player} to join country {country}"
+
 faction_uninvite:
-  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} cancelled invitation {player} to join country {country}"
-  
+  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} cancelled invitation {invited_player} to join country {country}"
+
 faction_promote:
-  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} demoted to {rank} {player} in country {country}"
-  
+  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} demoted to {rank} {target_player} in country {country}"
+
 faction_demote:
-  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} prommoted to {rank} {player} in country {country}"
-  
+  pattern: "{timestamp} [INFO] [NationsGUI] Player {player} prommoted to {rank} {target_player} in country {country}"
+
 faction_perms:
   pattern: "{timestamp} [INFO] [FACTION] {player} changed faction permission {permission} to [{ALLY}, {LEADER}, {MEMBER}, {NEUTRAL}, {OFFICER}, {RECRUIT}]"
-  
+
 # ===========================
 # Bank transactions
 # ===========================
@@ -282,7 +282,7 @@ warzone_add_power:
 
 warzone_add_powerboost:
   pattern: "{timestamp} [INFO] [WarZone] Le pays {country} vient de recevoir un powerboost de {amount} de la warzone."
-  
+
 # ===========================
 # Economie / Pays
 # ===========================
@@ -294,7 +294,7 @@ country_action_buy:
   pattern: "{timetamp} [INFO] [NationsGUI] ACHAT ACTION : {country_a}({player}) buy action of {country_b} for {price}$"
 
 country_found:
-  pattern: "{timestamp} [INFO] ONU >> {country} vient de fonder le pays {country} !"
+  pattern: "{timestamp} [INFO] ONU >> {player} vient de fonder le pays {country} !"
 
 country_new_leader:
   pattern: "{timestamp} [INFO] ONU >> {player} est le nouveau dirigeant du pays {country} !"
@@ -325,10 +325,10 @@ meteor_spawn:
 # ===========================
 
 access_set:
-  pattern: "{timestamp} [INFO] [Factions] Player {player} set access to player {player} in chunk {x}, {z} to true"
+  pattern: "{timestamp} [INFO] [Factions] Player {player} set access to player {target_player} in chunk {x}, {z} to true"
 
 access_remove:
-  pattern: "{timestamp} [INFO] [Factions] Player {player} remove access to player {player} in chunk {x}, {z} to false"
+  pattern: "{timestamp} [INFO] [Factions] Player {player} remove access to player {target_player} in chunk {x}, {z} to false"
 
 # ===========================
 # Divers

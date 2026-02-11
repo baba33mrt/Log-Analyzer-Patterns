@@ -320,6 +320,14 @@ powerboost_decrease:
 meteor_spawn:
   pattern: "{timestamp} [INFO] METEOR SPAWNED IN {planet} on player {player} at {x}, {y}, {z}"
 
+
+# ===========================
+# ASTEROIDS
+# ===========================
+
+asteroids_delete:
+  pattern: "{timestamp} [INFO] ASTEROIDS - Deleted {count} region files during world init (retries: {retry_count})"
+
 # ===========================
 # Access / Permissions
 # ===========================
